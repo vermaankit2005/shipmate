@@ -15,7 +15,7 @@ Check what exists. `docs/PLAN.md` present → this is a **mini-kickoff** (existi
 
 Ask a clarifying question ONLY if neither the argument nor the files answer what this kickoff is about — once, at the start, then never again this command.
 
-**Every choice you put to the user goes through the AskUserQuestion tool** — real options, honest descriptions, your recommendation first. That covers the clarifying question above, stack choices, quality gates, anything with a menu. Open brainstorm questions (understanding, challenging) are conversation, not menus — never turn those into option lists.
+**AskUserQuestion is for choices, not for conversation.** When a question is genuinely pick-from-options — quality gates, stack picks, a fork — use the AskUserQuestion tool: honest options, your recommendation first. The tool's built-in "Other" field already lets the user type a custom answer, so never add your own "Other" option, and treat a typed answer as first-class — never force it back into your options. Anything that doesn't fit a menu — open brainstorm, understanding, challenging — stays plain text; don't force the tool where it doesn't fit.
 
 ## Full kickoff (new product) — stages, one conversation
 

@@ -11,7 +11,7 @@ Per-sprint review already happens automatically inside `/sprint`. This command i
 
 ## Scope (from the words, not from a question)
 
-- "$ARGUMENTS" names a sprint → that sprint's diff, reconstructed from the **commit range logged in `docs/PLAN.md`'s sprint log**, judged against that sprint's deliverable and "proves", plus any user feedback about it.
+- "$ARGUMENTS" names a sprint → that sprint's diff, reconstructed from the **commit range logged in `docs/PLAN.md`'s sprint log**, judged against that sprint's goal and acceptance criteria, plus any user feedback about it.
 - Blank → the whole product against `docs/SCOPE.md`: every v1 promise, checked against the running product.
 
 ## 1. Mechanical first (cheap before expensive)

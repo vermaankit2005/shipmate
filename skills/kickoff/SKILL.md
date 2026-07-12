@@ -27,7 +27,18 @@ The user is present, and this conversation is the product of this command — th
 
 4. **Lock scope** — v1 in bullets, non-goals in bullets. Non-goals are the strongest defense against drift.
 5. **Stack & UI** — propose boring technology the user already knows; they override. If the product has a UI: pick a real component library and a look to follow now — hand-rolled bare HTML is banned. Define concretely what "run and exercise this product" means for this stack (browser flows? CLI invocations? emulator?). No UI → skip UI rules entirely.
-6. **Sprint plan** — each sprint = ONE focused deliverable that fits one sitting, with a stated "proves" (what running it will demonstrate). Sprint 1 is the walking skeleton: thinnest end-to-end runnable path. The riskiest assumption gets confronted as early as dependencies allow. **Always plan a final release sprint** (README-for-strangers, changelog, version, deploy) — shipping is work, not ceremony.
+6. **Sprint plan** — order sprints by RISK, not build convenience: the riskiest assumption gets confronted as early as dependencies allow; safe assembly work (wizards, polish, glue) comes after the scary parts are proven. Sprint 1 is the walking skeleton: thinnest end-to-end runnable path — and if it can already touch the riskiest part, it should. **Always plan a final release sprint** (README-for-strangers, changelog, version, deploy) — shipping is work, not ceremony.
+
+   Each sprint = ONE focused deliverable that fits one sitting, written in full — never a two-line summary. A sprint entry a stranger couldn't build from is not done:
+
+   ```
+   - [ ] Sprint N — <short name>
+     Goal: one sentence — what exists after this sprint that didn't before.
+     Tasks:
+     - 3–7 concrete bullets, each a real piece of work
+     Acceptance:
+     - checkable criteria — what running the product must demonstrate, specific enough to fail
+   ```
 
 If the user pushes back on any part of the plan: **edit it in place**. Never regenerate a document they've already read.
 
@@ -39,7 +50,7 @@ Read `docs/` first. Brainstorm just the new feature or the named sprint — same
 
 - `docs/SCOPE.md` — problem, users, v1 scope, non-goals, riskiest assumption
 - `docs/STACK.md` — choices + why, UI direction, and **exactly how to run/test/exercise this product**
-- `docs/PLAN.md` — sprints with deliverable, "proves", checkbox; a `## Current status` line; empty `## Sprint log`
+- `docs/PLAN.md` — sprints in the goal/tasks/acceptance format above, each with a checkbox; a `## Current status` line; empty `## Sprint log`
 - `docs/DECISIONS.md` — seeded with today's calls, one line each
 - `CLAUDE.md` (root) — two parts, keep it ~40 lines total:
   1. *Facts:* stack, run/test commands, UI rules, pointer to `docs/`
@@ -51,7 +62,7 @@ Read `docs/` first. Brainstorm just the new feature or the named sprint — same
 
 - [ ] You gave your own read of the idea (opinions, not just questions) and the idea changed shape because of the conversation
 - [ ] v1 scope fits the user's honest available time; non-goals ≥ 3
-- [ ] Sprint 1 is a walking skeleton; a release sprint exists; every sprint names what proves it
+- [ ] Sprint 1 is a walking skeleton; a release sprint exists; sprints are ordered by risk; every sprint has a goal, concrete tasks, and acceptance criteria specific enough to fail
 - [ ] "Run and exercise" is concretely defined for this stack
 - [ ] All files written and committed
 

@@ -52,7 +52,7 @@ Everything in shipmate follows from it:
 
 - **Silent until called.** No hooks, no preloaded skills, zero ambient context — your normal chats stay 100% yours. Type a command or shipmate doesn't exist
 - **Doesn't eat your money.** Costs nothing when idle; when working, tokens go into the product — never into ceremony about the product
-- **Joins at any phase.** Fresh idea → `/shipmate:kickoff`. Half-built repo — vibe-coded, abandoned, or rescued from another framework → `/shipmate:onboard` adopts it: reads the code, drafts the missing docs as proposals, stabilizes what's shaky, plans forward
+- **Joins at any phase.** Fresh idea → `/shipmate:kickoff`. Half-built repo — vibe-coded, abandoned, or rescued from another framework → `/shipmate:onboard` adopts it: **runs your code before judging it**, gives you an honest read, drafts the missing docs as proposals, and builds the stabilize sprint from what actually broke — not from guesses
 - **Leaves no lock-in.** Stop anytime — what remains is a well-documented repo, not a dependency
 
 ## Install
@@ -79,15 +79,15 @@ you're present         you're away          30 seconds of you
 
 **Kickoff** — the only phase that needs you:
 
-- A real back-and-forth: pressure-tests your idea, surfaces angles you missed
+- **A friend, not an intake form.** It listens until it can say your idea back sharper than you pitched it — then gives its own read: what's strong, what worries it, the closest existing tool, the assumption that kills it. Then you improve it together. If your idea comes out unchanged, it didn't push hard enough
 - Locks scope, stack, and UI direction — a proper component library, never bare HTML
 - Asks how much guardrail this product deserves — **tests + fresh-eyes review** (default), tests only, review only, or manual — one proper question, one tap
-- Plans sprints where **each sprint = one focused deliverable**
+- Plans sprints **ordered by risk, scariest first** — never buried under UI polish — and each sprint is a full spec: goal, concrete tasks, acceptance criteria specific enough to fail
 
 **Sprint** — you walk away:
 
 - Builds one deliverable, committing each finished piece — your history is your save file
-- Verifies by **running the product**, not by claiming
+- Verifies by **running the product**: every acceptance criterion walked one by one, pass or fail — plus a smoke pass of earlier sprints, so old work can't silently break
 - Fresh-eyes review + fix pass, then a **hard stop** — never rolls on unverified
 
 **Checkpoint** — 30 seconds, wherever you are:
@@ -102,7 +102,7 @@ Next: Sprint 3 (budgets + alerts). Go?
 ```
 
 - Reply **"go"** — next sprint starts
-- Or say what's wrong in plain words — it becomes the next sprint's fix-list
+- Or say what's wrong in plain words — **any session, even days later** — it becomes the next sprint's fix-list. And the fix-list is no back door: anything that would change your locked scope gets parked for a proper kickoff, never smuggled in
 - Checking the app yourself is your right, never your duty
 
 ## Commands

@@ -1,4 +1,5 @@
 ---
+name: review
 description: Deep fresh-eyes audit on demand — whole product before shipping, or one sprint on suspicion. Never reopens design; findings get one fix pass.
 argument-hint: [blank for whole product, or "sprint 3" for one sprint]
 disable-model-invocation: true

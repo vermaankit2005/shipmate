@@ -1,4 +1,5 @@
 ---
+name: onboard
 description: Adopt an existing codebase into shipmate — vibe-coded, abandoned, or rescued from another framework. Docs drafted as proposals, stabilize first, then plan forward.
 argument-hint: [optional: what you want to do next with this project]
 disable-model-invocation: true

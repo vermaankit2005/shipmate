@@ -1,4 +1,5 @@
 ---
+name: kickoff
 description: Kickoff conversation — brainstorm together, pressure-test the idea, lock scope/stack/UI, plan sprints. Full kickoff for new products, mini-kickoff for changes to an existing plan.
 argument-hint: [your idea — or "sprint 2" to rethink one, or a new feature to slot in]
 disable-model-invocation: true

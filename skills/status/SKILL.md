@@ -1,4 +1,5 @@
 ---
+name: status
 description: Orient in the current product — where things stand, what happened last, and the one next action. Read-only, fast, no ceremony.
 disable-model-invocation: true
 ---

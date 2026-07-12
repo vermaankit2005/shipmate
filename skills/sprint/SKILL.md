@@ -1,4 +1,5 @@
 ---
+name: sprint
 description: Build the next sprint's deliverable while the user is away — fix-list first, verify by running the product, fresh-eyes review, terse checkpoint report, hard stop.
 argument-hint: [optional: sprint number — blank builds the next one]
 disable-model-invocation: true

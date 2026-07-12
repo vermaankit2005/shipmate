@@ -93,7 +93,8 @@ you're present         you're away          30 seconds of you
 
 ```
 Sprint 2 done — add expense + monthly summary
-Ran it: add/edit/delete works, totals correct, empty month handled.
+Acceptance: 5/5 pass — add/edit/delete, totals, empty month all verified live.
+Smoke: sprint-1 flows still good.
 Reviewed: 2 findings fixed. 1 parked: category colors look dull.
 Try (if you want): npm run dev → localhost:3000
 Next: Sprint 3 (budgets + alerts). Go?

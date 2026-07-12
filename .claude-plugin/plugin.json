@@ -1,7 +1,7 @@
 {
   "name": "shipmate",
   "description": "A quality-first, main-loop-first workflow for solo developers: ideation → spec → plan → build → check → ship. File-based state so you never get lost; subagents only where isolation actually pays.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Ankit Verma",
     "email": "vermaankit.2005@gmail.com"

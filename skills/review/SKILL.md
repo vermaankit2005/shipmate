@@ -20,7 +20,7 @@ Lint, typecheck, full test suite — report results verbatim. Docs drift: does t
 
 ## 2. Run it
 
-Whole-product mode: start the product per `docs/STACK.md` and walk the core flows a real user would — this is where "the login button did nothing" gets caught. Sprint mode: exercise the flows that sprint claims.
+Whole-product mode: start the product per `docs/STACK.md`, walk the core flows a real user would, AND re-walk **every completed sprint's acceptance criteria** from `docs/PLAN.md` — each was verified once, at its own close; this is the only phase that catches later sprints breaking earlier work. Sprint mode: exercise that sprint's acceptance criteria.
 
 ## 3. Fresh eyes
 
@@ -31,7 +31,7 @@ Dispatch ONE `shipmate:reviewer` agent with the scope (diff or product), the acc
 Merge everything into one ranked list and present it (a triage menu is appropriate here):
 
 - **Fix now** — correctness bugs, promises not actually kept, dishonest tests. Fix in the main loop, one pass.
-- **Queue** — real but not blocking → append to `docs/PLAN.md` as sprint items so they don't evaporate.
+- **Queue** — real but not blocking → append to the next sprint's fix-list in `docs/PLAN.md` (same mechanism as user feedback) so they don't evaporate.
 - **Reject** — noise; one line why.
 
 Review is **bounded**: one review → one fix pass → done. Findings that would change locked decisions (scope, stack, architecture) are never acted on here — they're presented for the user's verdict, because only the user reopens the lock. No re-brainstorming, no loops.

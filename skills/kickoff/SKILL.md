@@ -17,12 +17,17 @@ Ask a clarifying question ONLY if neither the argument nor the files answer what
 
 ## Full kickoff (new product) — stages, one conversation
 
-The user is present. This is the phase that deserves their time. Work conversationally — one or two questions at a time, never a questionnaire. Challenge honestly: surface angles they missed, name the riskiest assumption, push scope DOWN until v1 feels almost too small. Park good-but-later ideas explicitly.
+The user is present, and this conversation is the product of this command — the docs at the end take five minutes; the thinking is what they're here for. You are a friend they're bouncing an idea off, not an intake form. A friend does four things, in order:
 
-1. **Brainstorm** — the problem, who feels it ("me" is valid), why existing tools fail, the assumption that kills this if false.
-2. **Scope** — v1 in bullets, non-goals in bullets. Non-goals are the strongest defense against drift.
-3. **Stack & UI** — propose boring technology the user already knows; they override. If the product has a UI: pick a real component library and a look to follow now — hand-rolled bare HTML is banned. Define concretely what "run and exercise this product" means for this stack (browser flows? CLI invocations? emulator?). No UI → skip UI rules entirely.
-4. **Sprint plan** — each sprint = ONE focused deliverable that fits one sitting, with a stated "proves" (what running it will demonstrate). Sprint 1 is the walking skeleton: thinnest end-to-end runnable path. The riskiest assumption gets confronted as early as dependencies allow. **Always plan a final release sprint** (README-for-strangers, changelog, version, deploy) — shipping is work, not ceremony.
+1. **Listen.** Let them lay out the idea. Ask questions only to understand — "who hits this problem?", "what do they do today instead?", "walk me through using it once". No challenging yet. When you think you've got it, say the idea back in your own words, sharper if you can, and let them correct you. Don't move on until they say "yes, that's it."
+
+2. **Give your own read.** Now you contribute — opinions, not questions. Honestly, as a peer: what's genuinely good about this idea; what worries you; the closest existing tool and what this must do better; who you think the real first user is; the one assumption that kills it if false. If you have doubts about the whole idea, say so plainly — the user still decides, but they deserve your real opinion, not agreement.
+
+3. **Improve it together.** Take the weak spots from your read one at a time and work them with the user. A point is done when it's been *tested* — challenged, answered, and the answer held up — not just answered. Push scope DOWN until v1 feels almost too small. Park good-but-later ideas explicitly. If the idea hasn't changed shape at all by the end of this — scope cut, framing sharpened, user narrowed — you didn't push hard enough.
+
+4. **Lock scope** — v1 in bullets, non-goals in bullets. Non-goals are the strongest defense against drift.
+5. **Stack & UI** — propose boring technology the user already knows; they override. If the product has a UI: pick a real component library and a look to follow now — hand-rolled bare HTML is banned. Define concretely what "run and exercise this product" means for this stack (browser flows? CLI invocations? emulator?). No UI → skip UI rules entirely.
+6. **Sprint plan** — each sprint = ONE focused deliverable that fits one sitting, with a stated "proves" (what running it will demonstrate). Sprint 1 is the walking skeleton: thinnest end-to-end runnable path. The riskiest assumption gets confronted as early as dependencies allow. **Always plan a final release sprint** (README-for-strangers, changelog, version, deploy) — shipping is work, not ceremony.
 
 If the user pushes back on any part of the plan: **edit it in place**. Never regenerate a document they've already read.
 
@@ -44,6 +49,7 @@ Read `docs/` first. Brainstorm just the new feature or the named sprint — same
 
 ## Done when
 
+- [ ] You gave your own read of the idea (opinions, not just questions) and the idea changed shape because of the conversation
 - [ ] v1 scope fits the user's honest available time; non-goals ≥ 3
 - [ ] Sprint 1 is a walking skeleton; a release sprint exists; every sprint names what proves it
 - [ ] "Run and exercise" is concretely defined for this stack

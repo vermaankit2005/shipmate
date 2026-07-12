@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 # /review — the deep audit
 
-Per-sprint review already happens automatically inside `/sprint`. This command is for the two other moments: the whole-product pass before shipping, and re-examining one sprint because the user's gut says something's off.
+Per-sprint review already happens automatically inside `/sprint` (when the quality gates include review). This command is for the two other moments: the whole-product pass before shipping, and re-examining one sprint because the user's gut says something's off. Typing it is an explicit request — it runs regardless of the gates, manual-mode projects included.
 
 ## Scope (from the words, not from a question)
 
@@ -28,7 +28,7 @@ Dispatch ONE `shipmate:reviewer` agent with the scope (diff or product), the acc
 
 ## 4. Triage with the user — they're present for this command
 
-Merge everything into one ranked list and present it (a triage menu is appropriate here):
+Merge everything into one ranked list, present it, then take the verdict with AskUserQuestion (fix all real ones now / queue the non-blockers / decide item by item):
 
 - **Fix now** — correctness bugs, promises not actually kept, dishonest tests. Fix in the main loop, one pass.
 - **Queue** — real but not blocking → append to the next sprint's fix-list in `docs/PLAN.md` (same mechanism as user feedback) so they don't evaporate.

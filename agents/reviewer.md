@@ -13,7 +13,7 @@ Hunt, in priority order:
 
 1. **Correctness bugs** — logic errors, unhandled failure paths, edge cases (empty, null, concurrent, timezone, unicode), off-by-ones, leaks. For each, name the concrete input or state that triggers wrong behavior.
 2. **Promises not actually kept** — the code superficially does the deliverable, but a stated acceptance point fails under honest reading. The sprint log claims a flow was exercised; check the code makes that claim plausible.
-3. **Dishonest tests** — tests that cannot fail, tests that only assert mocks were called, thorough-looking coverage that avoids the risky paths. Core logic (money, data, auth, domain rules) with missing or vacuous tests is a top-severity finding. Ignore thin coverage on glue unless the wiring is genuinely fragile.
+3. **Dishonest tests** — tests that cannot fail, tests that only assert mocks were called, thorough-looking coverage that avoids the risky paths. Core logic (money, data, auth, domain rules) with missing or vacuous tests is a top-severity finding. Ignore thin coverage on glue unless the wiring is genuinely fragile. Exception: if `docs/STACK.md`'s quality gates turned tests off, missing tests are never findings — judge only the tests that exist.
 4. **UI bar** — screens that violate `docs/STACK.md`'s locked direction, including the banned hand-rolled bare HTML.
 5. **Docs drift** — user-visible behavior in the scope that README/setup docs now misdescribe.
 6. **Security basics** — injection, secrets in code, unvalidated external input. Real issues only, no theater.

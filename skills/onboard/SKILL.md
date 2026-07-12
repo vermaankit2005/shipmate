@@ -28,7 +28,7 @@ An existing `docs/` folder with clashing names gets **merged politely** — neve
 
 ## 3. Plan forward — starting with stabilize
 
-"$ARGUMENTS" may say what's next; otherwise ask (once, now, while they're here). Then write `docs/PLAN.md` by kickoff's rules — same goal/tasks/acceptance format, same risk ordering — with one difference: **Sprint 1 is "stabilize"**, and its tasks come straight from what step 1 exposed: the failing tests, the broken flows, the setup that didn't work on this machine, the scariest uncovered core logic. If running it exposed nothing — product starts, flows work, tests green — say so and propose skipping stabilize; the user decides. Don't plan a rewrite; plan the next milestone of a product that already exists.
+"$ARGUMENTS" may say what's next; otherwise ask — once, now, while they're here, via AskUserQuestion (as with every choice you put to the user in this command). In the same breath, ask kickoff's **quality gates** question (AskUserQuestion: tests + fresh-eyes review / tests only / review only / manual) — an inherited codebase without tests may honestly not want them — and record the answer under `## Quality gates` in `docs/STACK.md`. Then write `docs/PLAN.md` by kickoff's rules — same goal/tasks/acceptance format, same risk ordering — with one difference: **Sprint 1 is "stabilize"**, and its tasks come straight from what step 1 exposed: the failing tests (if the gates include tests), the broken flows, the setup that didn't work on this machine, the scariest uncovered core logic. If running it exposed nothing — product starts, flows work, tests green — say so and propose skipping stabilize; the user decides. Don't plan a rewrite; plan the next milestone of a product that already exists.
 
 Git: init if somehow absent; commit the new docs plainly, no AI co-author trailers.
 
@@ -37,6 +37,7 @@ Git: init if somehow absent; commit the new docs plainly, no AI co-author traile
 - [ ] You ran the product and the tests, and gave the user your honest read before drafting any doc
 - [ ] User has corrected and approved SCOPE and STACK — unknowns are TODOs, not fiction
 - [ ] "Run and exercise it" works on this machine, verified by actually doing it once
+- [ ] Quality gates chosen by the user via AskUserQuestion and recorded in `docs/STACK.md`
 - [ ] PLAN.md exists: stabilize sprint (or explicit skip) + the next real sprints + a release sprint
 - [ ] Docs committed
 

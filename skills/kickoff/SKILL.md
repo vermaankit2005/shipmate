@@ -15,6 +15,8 @@ Check what exists. `docs/PLAN.md` present → this is a **mini-kickoff** (existi
 
 Ask a clarifying question ONLY if neither the argument nor the files answer what this kickoff is about — once, at the start, then never again this command.
 
+**Every choice you put to the user goes through the AskUserQuestion tool** — real options, honest descriptions, your recommendation first. That covers the clarifying question above, stack choices, quality gates, anything with a menu. Open brainstorm questions (understanding, challenging) are conversation, not menus — never turn those into option lists.
+
 ## Full kickoff (new product) — stages, one conversation
 
 The user is present, and this conversation is the product of this command — the docs at the end take five minutes; the thinking is what they're here for. You are a friend they're bouncing an idea off, not an intake form. A friend does four things, in order:
@@ -27,7 +29,9 @@ The user is present, and this conversation is the product of this command — th
 
 4. **Lock scope** — v1 in bullets, non-goals in bullets. Non-goals are the strongest defense against drift.
 5. **Stack & UI** — ask what stacks they already know, then propose boring technology from that list; they override. If the product has a UI, lock a direction concrete enough that later sprints can be *judged* against it: a real component library, a reference product ("looks like Linear"), layout density, and 3–5 short do/don'ts. "Clean and modern" is not a direction — every rule must be checkable by looking at a screen. Hand-rolled bare HTML is banned. Define concretely what "run and exercise this product" means for this stack (browser flows? CLI invocations? emulator?). No UI → skip UI rules entirely.
-6. **Sprint plan** — order sprints by RISK, not build convenience: the riskiest assumption gets confronted as early as dependencies allow; safe assembly work (wizards, polish, glue) comes after the scary parts are proven. Sprint 1 is the walking skeleton: thinnest end-to-end runnable path — and if it can already touch the riskiest part, it should. **Always plan a final release sprint** (README-for-strangers, changelog, version, deploy) — shipping is work, not ceremony.
+6. **Quality gates** — one AskUserQuestion, four options: **tests + fresh-eyes review** (recommended — the full guarantee), **tests only**, **review only**, or **manual** (no tests written, no reviewer agent; the user checks each checkpoint themselves). What they're building decides: a product handling money or user data wants everything; a weekend tool for themselves may not. Record the choice under a `## Quality gates` heading in `docs/STACK.md` plus one line in `docs/DECISIONS.md`. Running and exercising the product is NOT part of this question and can't be turned off — evidence over claims is the identity, not a setting.
+
+7. **Sprint plan** — order sprints by RISK, not build convenience: the riskiest assumption gets confronted as early as dependencies allow; safe assembly work (wizards, polish, glue) comes after the scary parts are proven. Sprint 1 is the walking skeleton: thinnest end-to-end runnable path — and if it can already touch the riskiest part, it should. **Always plan a final release sprint** (README-for-strangers, changelog, version, deploy) — shipping is work, not ceremony.
 
    Each sprint = ONE focused deliverable that fits one sitting, written in full — never a two-line summary. A sprint entry a stranger couldn't build from is not done:
 
@@ -49,12 +53,12 @@ Read `docs/` first. Same four moves as the full kickoff — listen, give your ow
 ## What full kickoff writes (all plain markdown, no hidden folders)
 
 - `docs/SCOPE.md` — problem, users, v1 scope, non-goals, riskiest assumption
-- `docs/STACK.md` — choices + why, UI direction, and **exactly how to run/test/exercise this product**
+- `docs/STACK.md` — choices + why, UI direction, the quality gates, and **exactly how to run/test/exercise this product**
 - `docs/PLAN.md` — sprints in the goal/tasks/acceptance format above, each with a checkbox; a `## Current status` line; empty `## Sprint log`
 - `docs/DECISIONS.md` — seeded with today's calls, one line each
 - `CLAUDE.md` (root) — two parts, keep it ~40 lines total:
   1. *Facts:* stack, run/test commands, UI rules, pointer to `docs/`
-  2. *How we work here (~10 lines):* built by a solo dev, quality bar = first-10k-users MVP, no enterprise over-engineering; never claim something works without running it; tests ship with code (deep for core logic, light for glue/UI); commit each finished piece; read `docs/PLAN.md` before working and tick what you finish; blocked → note it and move on; user feedback about built work → record it immediately in `docs/PLAN.md` as fix-list items for the next sprint, whatever session you're in
+  2. *How we work here (~10 lines):* built by a solo dev, quality bar = first-10k-users MVP, no enterprise over-engineering; never claim something works without running it; tests ship with code per the quality gates in `docs/STACK.md` (deep for core logic, light for glue/UI); commit each finished piece; read `docs/PLAN.md` before working and tick what you finish; blocked → note it and move on; user feedback about built work → record it immediately in `docs/PLAN.md` as fix-list items for the next sprint, whatever session you're in
 - `SHIPMATE.md` (root) — 10–15 lines: the five commands, when to type each, the rhythm ("back after a break? `/shipmate:status`")
 - Git: `git init` if needed, then a first commit of all of the above. Plain professional commit messages; no AI co-author trailers.
 
@@ -63,6 +67,7 @@ Read `docs/` first. Same four moves as the full kickoff — listen, give your ow
 - [ ] You gave your own read of the idea (opinions, not just questions) and the idea changed shape because of the conversation
 - [ ] v1 scope fits the user's honest available time; non-goals ≥ 3
 - [ ] Sprint 1 is a walking skeleton; a release sprint exists; sprints are ordered by risk; every sprint has a goal, concrete tasks, and acceptance criteria specific enough to fail
+- [ ] Quality gates chosen by the user via AskUserQuestion and recorded in `docs/STACK.md`
 - [ ] "Run and exercise" is concretely defined for this stack
 - [ ] All files written and committed
 

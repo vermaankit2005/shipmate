@@ -81,6 +81,7 @@ you're present         you're away          30 seconds of you
 
 - A real back-and-forth: pressure-tests your idea, surfaces angles you missed
 - Locks scope, stack, and UI direction — a proper component library, never bare HTML
+- Asks how much guardrail this product deserves — **tests + fresh-eyes review** (default), tests only, review only, or manual — one proper question, one tap
 - Plans sprints where **each sprint = one focused deliverable**
 
 **Sprint** — you walk away:
@@ -142,6 +143,7 @@ docs/DECISIONS.md   one line per non-obvious call, with the why
 
 - **Any stack?** Web, Android, Python, CLIs. Kickoff decides what "run it" means per project; no-UI projects skip the UI rules
 - **Token cost?** Zero until invoked. The deliberate spends — verification runs and one reviewer per sprint — exist to prevent the expensive thing: confident work on a broken product
+- **What if I don't want tests or an AI reviewer?** Kickoff asks — dial either off per project, or go full manual. The one thing that never turns off: your product gets **run** before anything is called done
 - **Do I babysit it?** No. Lock, leave, read 8 lines, say "go"
 
 ---

@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">shipmate</h1>
+<h1 align="center">Shipmate</h1>
 
 <p align="center">
   <b>Your AI shipmate for solo product development.</b><br>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="shipmate logo: a line-art sailboat">
+  <!-- dark-theme variant: off-white line work, coral mainsail. No background — just lines. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 28 C118 62 96 116 72 150 L128 150 Z" stroke="#FF7A59" stroke-width="7"/>
+    <path d="M140 58 C152 86 170 122 186 150 L140 150 Z" stroke="#EAF0F7" stroke-width="7"/>
+    <path d="M54 170 Q60 194 94 196 L168 196 Q194 194 201 168 Q128 182 54 170 Z" stroke="#EAF0F7" stroke-width="7"/>
+    <path d="M18 174 Q32 166 46 174 T74 174" stroke="#EAF0F7" stroke-width="6" opacity="0.55"/>
+    <path d="M120 212 Q134 204 148 212 T176 212 T204 212 T228 212" stroke="#EAF0F7" stroke-width="6" opacity="0.55"/>
+  </g>
+</svg>

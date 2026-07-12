@@ -1,0 +1,14 @@
+{
+  "name": "shipmate-marketplace",
+  "description": "Home of shipmate — your AI shipmate for solo product development: lock, sprint, verify, ship.",
+  "owner": {
+    "name": "Ankit Verma"
+  },
+  "plugins": [
+    {
+      "name": "shipmate",
+      "source": ".",
+      "description": "Your AI shipmate for solo product development — lock the plan together, it sprints while you're away, every claim verified by actually running the product."
+    }
+  ]
+}

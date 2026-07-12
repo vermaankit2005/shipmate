@@ -1,0 +1,13 @@
+{
+  "name": "shipmate",
+  "description": "A quality-first, main-loop-first workflow for solo developers: ideation → spec → plan → build → check → ship. File-based state so you never get lost; subagents only where isolation actually pays.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ankit Verma",
+    "email": "vermaankit.2005@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/vermaankit2005/shipmate",
+  "repository": "https://github.com/vermaankit2005/shipmate",
+  "keywords": ["workflow", "orchestration", "solo-dev", "micro-saas", "planning", "tdd", "quality"]
+}
